@@ -1,2 +1,2 @@
 !/bin/bash
-ls -pt|grep -v /|head
+ls -1pt|grep -v /|head
