@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Show use of trap command
+a=true
+trap "echo I am invincible!!!" SIGTERM
+while [ $a ]
+do
+  echo "To infinity and beyond"
+  sleep 2 
+done
