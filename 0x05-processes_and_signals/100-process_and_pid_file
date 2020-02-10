@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Show use of trap command7 
+a=true
+TEMP_FILE=/var/run/holbertonscript.pid
+clean_up() {
+      # Perform program exit housekeeping
+      echo "I hate the kill command"
+	    rm $TEMP_FILE
+	    exit
+}
+trap "echo Y U no love me?!" SIGINT
+trap clean_up SIGQUIT SIGTERM
+
+echo $BASHPID > $TEMP_FILE
+while [ $a ]
+do
+  echo "To infinity and beyond"
+  sleep 2 
+done
