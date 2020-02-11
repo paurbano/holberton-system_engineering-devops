@@ -41,12 +41,13 @@ Share your public key in your answer file 0-RSA_public_key.pub
 * Directory: 0x04-loops_conditions_and_parsing
 * File: 0-RSA_public_key.pub
 
-#1. For Holberton School loop
+# 1. For Holberton School loop
 Write a Bash script that displays Holberton School 10 times.
 
 Requirement:
 
 * You must use the for loop (while and until are forbidden)
+
     sylvain@ubuntu$ head -n 2 1-for_holberton_school 
     #!/usr/bin/env bash
     # This script is displaying "Holberton School" 10 times
