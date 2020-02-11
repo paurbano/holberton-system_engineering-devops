@@ -50,7 +50,7 @@ Requirement:
 
     sylvain@ubuntu$ head -n 2 1-for_holberton_school 
     #!/usr/bin/env bash
-    # This script is displaying "Holberton School" 10 times
+    This script is displaying "Holberton School" 10 times
     sylvain@ubuntu$ ./1-for_holberton_school 
     Holberton School
     Holberton School
