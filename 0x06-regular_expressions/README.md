@@ -12,7 +12,8 @@ Requirements:
 # 1. Repetition Token #0
 Requirements:
 
-*  Find the regular expression that will match the below cases::
+*  Find the regular expression that will match the below cases:
+
     hbn
     hbtn
     `**hbttn**`
@@ -23,7 +24,8 @@ Requirements:
 # 2. Repetition Token #1 
 Requirements:
 
-*  Find the regular expression that will match the below cases::
+*  Find the regular expression that will match the below cases:
+
     `**htn**`
     `**hbtn**`
     hbbtn
@@ -33,6 +35,7 @@ Requirements:
 Requirements:
 
 * Find the regular expression that will match the below cases:
+
     hbn
     `**hbtn**`
     `**hbttn**`
@@ -43,6 +46,7 @@ Requirements:
 Requirements:
 
 * Find the regular expression that will match the below cases:
+
     **hbn**
     hbon
     `**hbtn**`
