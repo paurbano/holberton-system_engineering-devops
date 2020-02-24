@@ -36,6 +36,7 @@ Requirements:
 
 * Find the regular expression that will match the below cases:
 
+
     hbn
     `**hbtn**`
     `**hbttn**`
@@ -46,6 +47,7 @@ Requirements:
 Requirements:
 
 * Find the regular expression that will match the below cases:
+
 
     **hbn**
     hbon
@@ -64,6 +66,7 @@ Requirement:
 * The regular expression must match a 10 digit phone number
 Example:
 
+
     sylvain@ubuntu$ ./6-phone_number.rb 4155049898 | cat -e
     4155049898$
     sylvain@ubuntu$ ./6-phone_number.rb " 4155049898" | cat -e
@@ -78,6 +81,8 @@ Example:
 Requirement:
 
 * The regular expression must be only matching: capital letters
+
+
     sylvain@ubuntu$ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "I realLy hOpe VancouvEr posseSs Yummy Soft vAnilla Dupper Mint Ice Nutella cream" | cat -e
     ILOVESYSADMIN$
     sylvain@ubuntu$ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "WHAT do you SAY?" | cat -e
