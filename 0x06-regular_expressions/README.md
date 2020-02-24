@@ -67,15 +67,16 @@ Requirement:
 Example:
 
 
-    sylvain@ubuntu$ ./6-phone_number.rb 4155049898 | cat -e
-    4155049898$
-    sylvain@ubuntu$ ./6-phone_number.rb " 4155049898" | cat -e
+    sylvain@ubuntu$ ./6-phone_number.rb 4155049898 | cat -e 
+    4155049898$ 
+    sylvain@ubuntu$ ./6-phone_number.rb " 4155049898" | cat -e 
     $
-    sylvain@ubuntu$ ./6-phone_number.rb "415 504 9898" | cat -e
+    sylvain@ubuntu$ ./6-phone_number.rb "415 504 9898" | cat -e 
     $
     sylvain@ubuntu$ ./6-phone_number.rb "415-504-9898" | cat -e
     $
     sylvain@ubuntu$
+
 
 # 7. OMG WHY ARE YOU SHOUTING?
 Requirement:
