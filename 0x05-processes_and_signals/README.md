@@ -118,3 +118,6 @@ Write a Bash script that:
 * Displays `I hate the kill command` when receiving a SIGTERM signal
 * Displays `Y U no love me?!` when receiving a SIGINT signal
 * Deletes the file `/var/run/holbertonscript.pid` and terminates itself when receiving a SIGQUIT or SIGTERM signal
+
+
+## Author - [Pablo Andres Urbano De la Cruz](paurbano@gmail.com)
