@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx web server
+# Redirect to another page.
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo chmod 777 /var/www/html/index.nginx-debian.html
