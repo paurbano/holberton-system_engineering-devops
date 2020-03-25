@@ -2,7 +2,5 @@
 # Install nginx web server
 apt-get -y update
 apt-get -y install nginx
-ufw allow 'Nginx Full'
-chown -R www-data /var/www/html/
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
-service nginx start
+service nginx restart
