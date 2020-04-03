@@ -4,5 +4,5 @@ apt-get -y update
 apt-get -y upgrade
 apt-get -y install nginx
 sed -i "11i\\\tadd_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
-echo "Holberton School" > /usr/share/nginx/html/index.html
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
 sudo service nginx start
