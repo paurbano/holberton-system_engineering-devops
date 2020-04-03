@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
 # Install Nginx that its HTTP response contains a custom header
-SRC="/etc/nginx/sites-available/default"
-REDIR="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
-ERRDIR="\\\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
-HEADER="\\\n\tadd_header X-Served-By \$hostname;\n"
-sudo apt-get -y update
-sudo apt-get -y install nginx
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
-sudo sed -i "30i $REDIR" $SRC
-sudo sed -i "48i $ERRDIR" $SRC
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo sed -i "28i $HEADER" $SRC
-sudo service nginx restart
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install nginx
+sed -i "11i\\\tadd_header X-Served-By \$HOSTNAME;" /etc/nginx/sites-available/default
+echo "Holberton School" > /usr/share/nginx/html/index.html
+sudo service nginx start
