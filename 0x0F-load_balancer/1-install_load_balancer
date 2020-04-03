@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 # install load balancer
-sudo apt-get -y install software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
-sudo apt-get -y update
-sudo apt-get install haproxy=2.0.\*
-sudo echo -e "\nlisten www" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tbind :80" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tbalance roundrobin" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver 1283-web-01 35.185.87.254 check" >> /etc/haproxy/haproxy.cfg
-sudo echo -e "\tserver 1283-web-02 52.72.127.245 check" >> /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+apt-get update -y
+apt-get install software-properties-common -y
+apt-get update -y
+echo | add-apt-repository ppa:vbernat/haproxy-2.0
+apt-get update -y
+apt-get install haproxy=2.0.\* -y
+FEND="\nfrontend haproxynode\n\tbind *:80\n\tmode http\n\tdefault_backend backendnodes\n"
+echo -e "$FEND" >> /etc/haproxy/haproxy.cfg
+BEND="backend backendnodes\n\tbalance roundrobin\n\tserver 1181-web-01 35.231.116.248:80 check\n\tserver 1181-web-02 54.83.93.155:80 check\n"
+echo -e "$BEND" >> /etc/haproxy/haproxy.cfg
+sed -ie 's/\sssl.*//' /etc/haproxy/haproxy.cfg
+service haproxy start
