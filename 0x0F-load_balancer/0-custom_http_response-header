@@ -8,7 +8,7 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 sudo sed -i "30i $REDIR" $SRC
-sudo sed -i "28i $HEADER" $SRC
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
 sudo sed -i "48i $ERRDIR" $SRC
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo sed -i "28i $HEADER" $SRC
 sudo service nginx restart
