@@ -2,7 +2,7 @@
 # Install Nginx that its HTTP response contains a custom header
 RED="location /redirect_me {\n\t\treturn 301;\n\t}"
 NTF="error_page 404 /cm_404.html;\n\tlocation = /cm_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
-HEADR="\t\tadd_header X-Served-By \$(hostname);"
+HEADR="\t\tadd_header X-Served-By \$hostname;"
 apt-get update
 apt-get install nginx -y
 echo "Holberton School" > /var/www/html/index.nginx-debian.html
