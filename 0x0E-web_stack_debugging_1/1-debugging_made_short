@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # task #0, make your fix short and sweet.
 sudo sed -i 's/8080/80/'  /etc/nginx/sites-enabled/default
-sudo sed -i 's/8080/80/' /etc/nginx/sites-available/default
 service nginx start
-sudo pkill -f /run/nginx.pid
+sudo pkill | ps aux | pgrep nginx
