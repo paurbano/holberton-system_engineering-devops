@@ -2,4 +2,4 @@
 # task #0, make your fix short and sweet.
 sudo sed -i 's/8080/80/'  /etc/nginx/sites-enabled/default
 service nginx start
-sudo pkill | ps aux | pgrep nginx
+rm /run/nginx.pid
