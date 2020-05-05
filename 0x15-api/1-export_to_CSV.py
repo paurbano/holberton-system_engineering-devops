@@ -13,10 +13,11 @@ if __name__ == "__main__":
     reqEmployee = requests.get(url + sys.argv[1])
     reqTodos = requests.get(url + sys.argv[1] + '/todos/')
     jsonemp = reqEmployee.json()
-    filename = jsonemp.get('id')
+    filename = str(jsonemp.get('id')) + ".csv"
+    print(filename)
     with open(filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=",",
                                quotechar='"', quoting=csv.QUOTE_ALL)
         for task in reqTodos.json():
-            csvwriter = writerow(task.get('userId'), jsonemp.get('username'),
-                                 task.get('completed'), task.get('title'))
+            csvwriter.writerow([task.get('userId'), jsonemp.get('username'),
+                                task.get('completed'), task.get('title')])
