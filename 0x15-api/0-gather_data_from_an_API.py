@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     jsonemp = reqEmployee.json()
     tasks = [key['completed'] for key in reqTodos.json()]
-    print("Employee {} is done with task ({}/{}):".format(jsonemp.get('name'),
+    print("Employee {} is done with tasks({}/{}):".format(jsonemp.get('name'),
           tasks.count(True), len(tasks)))
     for task in reqTodos.json():
         if task.get('completed') is True:
