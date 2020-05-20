@@ -1,6 +1,6 @@
 # fix wordpress
 
-exec {'rename_file':
-  path    => '/var/www/html/wp-includes/'
-  command => 'mv class-wp-locale.phpp class-wp-locale.php'
+file { '/var/www/html/wp-includes/class-wp-locale.phpp':
+    ensure => present,
+    source => '/var/www/html/wp-includes/class-wp-locale.php',
 }
