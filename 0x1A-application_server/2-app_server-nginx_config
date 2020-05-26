@@ -59,9 +59,14 @@ server {
                 alias /data/web_static/current/;
         }
 
+        # project 0x1A applications server engineering & DevOps
+        # task 2.
+        # configure Nginx to serve your page from the route /airbnb-onepage/
+        # working together with gunicorn 
         location /airbnb_onepage/ {
                proxy_pass http://0.0.0.0:5000/airbnb_onepage/;
         }
+
         #
         #location ~ \.php$ {
         #       include snippets/fastcgi-php.conf;
