@@ -20,10 +20,14 @@ server {
                 add_header X-Served-By $hostname;
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
+                # try_files $uri $uri/ =404;
                 # task 5 - Serve AirBnB clone 
-                proxy_pass http://0.0.0.0:5003/;
+                proxy_pass http://0.0.0.0:5003/2-hbnb;
         }
+
+        # task5
+        location /static {
+                 proxy_pass http://0.0.0.0:5003/;
 
         error_page 404 /cm_404.html;
 
