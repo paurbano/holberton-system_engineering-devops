@@ -2,12 +2,7 @@
 # take it from https://www.claudiokuenzler.com/blog/850/nginx-socket-failed-24-too-many-open-files
 
 # change limit file /etc/default/nginx
-file_line { 'IncreaseLimit':
-line => 'ULIMIT="-n 4096"',
-path => '/etc/default/nginx'
-}
-
 exec { 'restart':
-command => 'sudo service nginx restart',
-path    => ['/usr/bin/','/usr/sbin','/bin']
+command => "sed -i 's/15/4096/g' /etc/default/nginx; sudo service nginx restart",
+path    => ['/usr/bin/', '/usr/sbin', '/bin']
 }
